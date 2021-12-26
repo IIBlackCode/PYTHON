@@ -4,7 +4,7 @@ KFQ_FinalProject
 
 git init : 현재 파일을 깃허브와 연동 
 
-git remote add origin https://github.com/IIBlackCode/KFQ_FinalProject.git : 깃허브 오리진에 추가 
+git remote add origin https://github.com/IIBlackCode/PYTHON.git : 깃허브 오리진에 추가 
 
 git remote -v : 연결확인
 
