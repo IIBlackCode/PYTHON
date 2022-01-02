@@ -1,0 +1,27 @@
+<div class="col-md-4">
+    <div class="panel">
+        <div class="panel-heading">
+            <!--<h1 class="panel-title">모델 선택</h1>-->
+            <h2 class="">모델 선택</h2>
+        </div>
+
+        <div class="panel-body" id="radio_model" >
+            <label class="fancy-radio">
+                <input name="model" value="RNN" type="radio" onclick="select_Model()" checked>
+                <span><i></i>RNN</span>
+            </label>
+            <label class="fancy-radio">
+                <input name="model" value="LSTM" type="radio" onclick="select_Model()">
+                <span><i></i>LSTM</span>
+            </label>
+            <label class="fancy-radio">
+                <input name="model" value="Bidirectional_LSTM" type="radio" onclick="select_Model()">
+                <span><i></i>양방향LSTM</span>
+            </label>
+            <label class="fancy-radio">
+                <input name="model" value="GRU" type="radio" onclick="select_Model()">
+                <span><i></i>GRU</span>
+            </label>
+        </div>
+    </div>
+</div>
