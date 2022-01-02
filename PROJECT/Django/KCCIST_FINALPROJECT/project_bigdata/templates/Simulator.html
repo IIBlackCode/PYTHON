@@ -1,0 +1,584 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>Dashboard | Klorofil - Free Bootstrap Dashboard Template</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+	<!-- VENDOR CSS -->
+	<link rel="stylesheet" href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css'  %}">
+	<link rel="stylesheet" href="{% static 'assets/vendor/font-awesome/css/font-awesome.min.css'  %}">
+	<link rel="stylesheet" href="{% static 'assets/vendor/linearicons/style.css'  %}">
+	<link rel="stylesheet" href="{% static 'assets/vendor/chartist/css/chartist-custom.css'  %}">
+
+	<!-- MAIN CSS -->
+	<link rel="stylesheet" href="{% static 'assets/css/main.css'  %}">
+
+	<!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
+	<link rel="stylesheet" href="{% static 'assets/css/demo.css'  %}">
+
+	<!-- GOOGLE FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+
+	<!-- ICONS -->
+	<link rel="apple-touch-icon" sizes="76x76" href="{% static './assets/img/apple-icon.png' %}">
+	<link rel="icon" type="image/png" sizes="96x96" href="{% static './assets/img/favicon.png' %}">
+
+</head>
+
+<body>
+<!-- WRAPPER -->
+<div id="wrapper">
+
+
+
+
+	<!-- MAIN -->
+	<!--<div class="main">-->
+		<!-- MAIN CONTENT -->
+		<div class="main-content">
+
+			<div class="">
+				<video autoplay loop muted playsinline src="{% static 'video.mp4' %}"  id="bgvid"></video>
+
+				<!--<div class="row">-->
+				{% block content %}
+				<form name="form1" id="form1" method="POST">
+				<div class="col-md-4">
+					<div class="panel">
+						<!-- 테마선택 -->
+						{% include "Simulator/Simulator_Select-Theme.html" %}
+
+						<hr>
+						<!-- 종목선택 -->
+						{% include "Simulator/Simulator_Select-Stock.html" %}
+
+						<hr>
+						<!-- 학습기간 선택 -->
+						{% include "Simulator/Simulator_Learning period.html" %}
+
+						<hr>
+						<!-- 주가 -->
+						{% include "Simulator/Simulator_StockData.html" %}
+
+						<hr>
+						<div class="panel-body">
+							<input type="button" value="학습 실행" onclick="clkTrain(); return false;" class="btn btn-primary btn-block">
+
+							<hr>
+							<button type="button" class="btn btn-danger btn-block" onclick="saveModel()">
+								<span class="lnr lnr-download"></span> <span class="cssclass">MODEL DOWNLOAD</span>
+							</button>
+							<hr>
+							<a type="button" onclick="clkSync()" class="btn btn-primary btn-block btn-success">데이터 동기화</a>
+						</div>
+						<hr>
+					</div>
+				</div>
+
+				<!-- 모델선택 -->
+				{% include "Simulator/Simulator_Select-Model.html" %}
+				<!-- 예측기간 선택 -->
+				{% include "Simulator/Simulator_predictDate.html" %}
+
+
+				</form>
+				{% endblock %}
+
+				<!-- Line Chart -->
+				{% include "Simulator/Simulator_Line Chart.html" %}
+
+
+			</div>
+		<!--</div>-->
+	<!-- END MAIN CONTENT -->
+
+	</div><!-- END MAIN -->
+	<div class="clearfix"></div>
+	<footer>
+		<div class="container-fluid">
+			<p class="copyright">Shared by <i class="fa fa-love"></i><a href="https://bootstrapthemes.co">BootstrapThemes</a></p>
+		</div>
+	</footer>
+</div>
+<!-- END WRAPPER -->
+
+<!-- Javascript -->
+<script src="{% static 'assets/vendor/jquery/jquery.min.js'  %}"></script>
+<script src="{% static 'assets/vendor/bootstrap/js/bootstrap.min.js'  %}"></script>
+<script src="{% static 'assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js'  %}"></script>
+<script src="{% static 'assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js'  %}"></script>
+<script src="{% static 'assets/vendor/chartist/js/chartist.min.js'  %}"></script>
+<script src="{% static 'assets/scripts/klorofil-common.js'  %}"></script>
+<script src="https://code.highcharts.com/stock/highstock.js"></script>
+<script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/stock/modules/export-data.js"></script>
+<script>
+// 페이지 첫 호출 시 '학습기간, 학습데이터, 모델, 예측기간' 초기값을 전송함
+var select_date = document.getElementById("select_date").value;
+var test = document.getElementById("stock_kind");
+var stock_kind = test.options[document.getElementById("stock_kind").selectedIndex].text;
+var model = document.querySelector('input[name="model"]:checked').value;
+var predictDate = document.querySelector('input[name="predictDate"]:checked').value;
+console.log(select_date)
+console.log(stock_kind)
+console.log(model)
+console.log(predictDate)
+
+$.ajax({
+	type : 'POST',
+	url : "{% url 'radioTerm' %}",
+	data : {select_date : select_date},
+	success : function(data) {
+		//Console 창으로 data확인
+		console.log('데이터 보내기 성공',data);
+	}//end of success
+})//The end of Ajax
+$.ajax({
+	type : 'POST',
+	url : "{% url 'radioData' %}",
+	data : {stock_kind : stock_kind},
+	success : function(data) {
+		//Console 창으로 data확인
+		console.log('데이터 보내기 성공',data);
+
+	}//end of success
+})//The end of Ajax
+$.ajax({
+	type : 'POST',
+	url : "{% url 'radioModel' %}",
+	data : {model : model},
+	success : function(data) {
+		//Console 창으로 data확인
+		console.log('데이터 보내기 성공',data);
+
+	}//end of success
+})//The end of Ajax
+$.ajax({
+	type : 'POST',
+	url : "{% url 'radioPredictDate' %}",
+	data : {predictDate : predictDate},
+	success : function(data) {
+		//Console 창으로 data확인
+		console.log('데이터 보내기 성공',data);
+
+	}//end of success
+})//The end of Ajax
+
+</script>
+<script>
+// 태마 SELECT 태그 선택시 호출되는 함수
+function select_Theme() {
+	var test = document.getElementById("select_theme");
+	var select_theme = test.options[document.getElementById("select_theme").selectedIndex].text;
+	console.log(select_theme)
+	$.ajax({
+		type : 'POST',
+		url : "{% url 'radioTheme' %}",
+		data : {select_theme : select_theme},
+		success : function(data) {
+			//Console 창으로 data확인
+			console.log('데이터 보내기 성공',data);
+			var themeArray = data.themeList
+			console.log('themeArray.length',themeArray.length);
+			var html = "";
+			$('#select_stock').children('option').remove()
+			for(var i=0; i<themeArray.length; i++){
+				console.log(themeArray[i])
+				$('#select_stock').append("<option>"+themeArray[i]+"</option>")
+			}
+
+			// 테마 선택시 나열되는 종목리스트의 첫번째놈을 back단에 보내기
+			var test = document.getElementById("select_stock");
+			var select_stock = test.options[document.getElementById("select_stock").selectedIndex].text;
+			console.log(select_stock)
+			$.ajax({
+				type : 'POST',
+				url : "{% url 'radioStock' %}",
+				data : {select_stock : select_stock},
+				success : function(data) {
+					//Console 창으로 data확인
+					console.log('데이터 보내기 성공',data);
+
+				}//end of success
+			})//The end of Ajax
+
+		}//end of success
+	})//The end of Ajax
+}// The end of function
+</script>
+<script>
+// 종목 SELECT 태그 선택시 호출되는 함수
+function select_Stock() {
+	var test = document.getElementById("select_stock");
+	var select_stock = test.options[document.getElementById("select_stock").selectedIndex].text;
+	console.log(select_stock)
+	$.ajax({
+		type : 'POST',
+		url : "{% url 'radioStock' %}",
+		data : {select_stock : select_stock},
+		success : function(data) {
+			//Console 창으로 data확인
+			console.log('데이터 보내기 성공',data);
+
+		}//end of success
+	})//The end of Ajax
+}// The end of function
+</script>
+<script>
+// 학습기간 SELECT 태그 선택시 호출되는 함수
+function select_Term() {
+	var select_date = document.getElementById("select_date").value;
+	console.log(select_date)
+	$.ajax({
+		type : 'POST',
+		url : "{% url 'radioTerm' %}",
+		data : {select_date : select_date},
+		success : function(data) {
+			//Console 창으로 data확인
+			console.log('데이터 보내기 성공',data);
+
+		}//end of success
+	})//The end of Ajax
+}// The end of function
+</script>
+<script>
+// 학습데이터 SELECT 태그 선택시 호출되는 함수
+function select_Kind() {
+	var test = document.getElementById("stock_kind");
+	var stock_kind = test.options[document.getElementById("stock_kind").selectedIndex].text;
+	console.log(stock_kind)
+	$.ajax({
+		type : 'POST',
+		url : "{% url 'radioData' %}",
+		data : {stock_kind : stock_kind},
+		success : function(data) {
+			//Console 창으로 data확인
+			console.log('데이터 보내기 성공',data);
+
+		}//end of success
+	})//The end of Ajax
+}// The end of function
+</script>
+<script>
+// 모델 SELECT 태그 선택시 호출되는 함수
+function select_Model() {
+	var model = document.querySelector('input[name="model"]:checked').value;
+	console.log(model)
+	$.ajax({
+		type : 'POST',
+		url : "{% url 'radioModel' %}",
+		data : {model : model},
+		success : function(data) {
+			//Console 창으로 data확인
+			console.log('데이터 보내기 성공',data);
+
+		}//end of success
+	})//The end of Ajax
+}// The end of function
+</script>
+<script>
+// 모델 SELECT 태그 선택시 호출되는 함수
+function select_PredictDate() {
+	var predictDate = document.querySelector('input[name="predictDate"]:checked').value;
+	console.log(predictDate)
+	$.ajax({
+		type : 'POST',
+		url : "{% url 'radioPredictDate' %}",
+		data : {predictDate : predictDate},
+		success : function(data) {
+			//Console 창으로 data확인
+			console.log('데이터 보내기 성공',data);
+
+		}//end of success
+	})//The end of Ajax
+}// The end of function
+</script>
+
+<script>
+function setChart() {
+	Highcharts.setOption({
+		global: {
+			useUTC: false
+		}
+	});
+};
+
+//학습실행 버튼 클릭하면 호출되는 함수
+function clkTrain() {
+   var formData = $("#form1").serialize();
+   console.log("clkTrain()",formData)
+
+
+   $.ajax({
+      //type : 'POST',
+      dataType : 'json',
+      url : "{% url 'clkTrain' %}",
+      //data : formData,
+      success : function(data) {
+
+         Highcharts.setOptions({
+            global: {
+               useUTC: false
+            }
+         });
+
+         Highcharts.stockChart("LineChart",
+         {
+            exporting: {
+                  filename: data.modelName,
+                  csv:{
+                     dateFormat:"%Y-%m-%d"
+                  },
+                  sourceHeight: 800,
+                  chartOptions:{
+               rangeSelector: {
+                  enabled: false
+               },
+               legend: {
+                  backgroundColor: 'rgba(200,200,200,.6)',
+                  enabled: true,
+                  align: 'left',
+                  verticalAlign: 'top',
+                  floating: false,
+                  symbolHeight:30,
+                  x: 0,
+                  y: 0,
+                  itemStyle:{
+                    "fontSize" : "20px"
+                  }
+               },
+                  }
+            },
+
+            chart: {
+               height: 800,
+            },
+
+            title: {
+               text: data.select_stock,
+               style:{
+                  "fontSize" : "30px"
+               }
+            },
+
+            subtitle: {
+               text: 'loss: ' + (data.loss).substring(0,7) + '  ' + 'mae: ' + (data.mae).substring(0,7),
+               style:{
+                  "fontSize" : "26px"
+               }
+            },
+
+            rangeSelector: {
+               buttons: [{
+                  type: 'month',
+                  count: 1,
+                  text: '1m'
+               }, {
+                  type: 'month',
+                  count: 3,
+                  text: '3m'
+               }, {
+                  type: 'month',
+                  count: 6,
+                  text: '6m'
+               }, {
+                  type: 'ytd',
+                  text: 'YTD'
+               }, {
+                  type: 'year',
+                  count: 1,
+                  text: '1y'
+               }, {
+                  type: 'all',
+                  text: 'All'
+               }],
+               selected: 5,
+               buttonPosition:{
+                  align:'right',
+                  x:0,
+                  y:0
+               },
+               inputEnabled: false,
+               labelStyle:{
+                  "fontSize" : "20px"
+               },
+               buttonTheme: { // styles for the buttons
+                  width: '60px',
+                  style: {
+                     padding: '5px, 5px, 5px, 5px',
+                     fontSize: '20px',
+                     fontWeight: 'bold'
+                  },
+               },
+               buttonSpacing: 10
+            },
+
+            xAxis: {
+               type: 'datetime',
+               labels:{
+                  formatter: function(){
+                     return Highcharts.dateFormat('%y.%m.%d', this.value);
+                  },
+                  step: 0,
+                  style:{
+                     fontSize : "20px",
+                     paddingLeft: '10px',
+                     paddingRight: '10px'
+                  },
+                  overflow: 'allow',
+                  rotation: -30
+               }
+            },
+
+            yAxis: {
+               labels: {
+                  format: '{value}',
+                  style: {
+                     color: 'rgba(0,0,0,.6)',
+                     fontSize : "20px",
+                  },
+                  x: 0
+               },
+               opposite: false,
+            },
+
+            tooltip: {
+               xDateFormat: '%Y-%m-%d',
+               split: true,
+               style:{
+                  "fontSize" : "20px",
+                  "text-align" : "center"
+               }
+            },
+
+            series:
+            [{
+               name: data.predictDate + ' 예측가',
+               data: data.predict2,
+               lineWidth: 3
+            },
+            {
+               name: '과거' + data.predictDate + ' 예측가',
+               data: data.predict1,
+               color: 'rgba(230,140,0,.6)',
+               lineWidth: 3
+            },
+            {
+               name: '실제 주가',
+               data: data.actual,
+               color: 'rgba(0,200,0,.6)',
+               lineWidth: 2
+            }],
+
+            legend: {
+               backgroundColor: 'rgba(200,200,200,.6)',
+               enabled: true,
+               align: 'left',
+               verticalAlign: 'top',
+               floating: true,
+               symbolHeight:30,
+               x: 0,
+               y: 50,
+               itemStyle:{
+                  "fontSize" : "20px"
+               }
+            },
+
+            responsive: {
+               rules: [{
+                  condition: {
+                     maxWidth: 600
+                  },
+                  chartOptions: {
+                     chart: {
+                        height: 600,
+                     },
+                     navigator: {
+                        enabled: false
+                     }
+                  }
+               }]
+            }
+         });
+
+      }//end of success
+
+   })//The end of Ajax
+}// The end of function
+</script>
+<script>
+function saveModel() {
+	console.log("saveModel CLICK")
+	let data = 'mydata=foo&excel=bar';
+	let request = new XMLHttpRequest();
+    request.open('POST', '{% url "saveModel" %}', true);
+    request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+    request.responseType = 'blob';
+
+    request.onload = function (e) {
+        if (this.status === 200) {
+            let filename = "";
+            let disposition = request.getResponseHeader('Content-Disposition');
+            // check if filename is given
+            if (disposition && disposition.indexOf('attachment') !== -1) {
+                let filenameRegex = /filename[^;=\n]*=((['"]).*?\2|[^;\n]*)/;
+                let matches = filenameRegex.exec(disposition);
+                if (matches != null && matches[1])
+                {
+                	filename = matches[1].replace(/['"]/g, '');
+                	//console.log("filename", decodeURIComponent(filename))
+            	}
+            }
+            let blob = this.response;
+            if (window.navigator.msSaveOrOpenBlob) {
+                window.navigator.msSaveBlob(blob, filename);
+            }
+            else {
+                let downloadLink = window.document.createElement('a');
+                let contentTypeHeader = request.getResponseHeader("Content-Type");
+                downloadLink.href = window.URL.createObjectURL(new Blob([blob], {type: contentTypeHeader}));
+                downloadLink.download = decodeURIComponent(filename).substring(5, decodeURIComponent(filename).length) + '.h5';
+                document.body.appendChild(downloadLink);
+                downloadLink.click();
+                document.body.removeChild(downloadLink);
+            }
+        } else {
+            alert('Download failed.')
+        }
+    };
+    request.send(data);
+
+}// The end of function
+
+<!--//학습실행 버튼 클릭하면 호출되는 함수-->
+<!--function saveChart() {-->
+<!--console.log("SAVE CHART CLICK")-->
+<!--	$.ajax({-->
+<!--		type : 'GET',-->
+<!--		url : "/saveChart",-->
+<!--		success : function() {-->
+<!--			console.log("Chart Save",data)-->
+<!--		}//end of success-->
+<!--	})//The end of Ajax-->
+<!--}// The end of function-->
+</script>
+<script>
+// 동기화 버튼 클릭시 호출되는 함수
+function clkSync() {
+   console.log("clkSync()")
+   $.ajax({
+      type : 'GET',
+      url : "{% url 'syncData' %}",
+      success : function(data) {
+         //Console 창으로 data확인
+         console.log('동기화 성공', data);
+      }//end of success
+   })//The end of Ajax
+}// The end of function
+</script>
+</body>
+</html>
