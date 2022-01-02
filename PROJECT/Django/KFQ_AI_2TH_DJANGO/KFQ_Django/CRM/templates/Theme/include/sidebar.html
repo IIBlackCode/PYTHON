@@ -1,0 +1,176 @@
+{% load static %}
+<nav id="sidebar" class="sidebar">
+	<div class="sidebar-content js-simplebar">
+		<a class="sidebar-brand" href="/CRM/theme/index"><span class="align-middle">AdminKit</span></a>
+
+		<ul class="sidebar-nav">
+			<li class="sidebar-header">
+				Thema Pages
+			</li>
+			<!-- Nav List Start -->
+			{% block content %}
+
+			{% if page == 'Dashboard' %}
+			<li class="sidebar-item active">
+			{% else %}
+			<li class="sidebar-item">
+			{% endif %}
+
+				<a class="sidebar-link" href="/CRM/theme/index">
+					<i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
+				</a>
+			</li>
+
+			{% if page == 'Profile' %}
+			<li class="sidebar-item active">
+			{% else %}
+			<li class="sidebar-item">
+			{% endif %}
+
+				<a class="sidebar-link" href="/CRM/theme/profile">
+					<i class="align-middle" data-feather="user"></i> <span class="align-middle">Profile</span>
+				</a>
+			</li>
+
+			{% if page == 'Settings' %}
+			<li class="sidebar-item active">
+			{% else %}
+			<li class="sidebar-item">
+			{% endif %}
+
+				<a class="sidebar-link" href="/CRM/theme/settings">
+					<i class="align-middle" data-feather="settings"></i> <span class="align-middle">Settings</span>
+				</a>
+			</li>
+
+			{% if page == 'Invoice' %}
+			<li class="sidebar-item active">
+			{% else %}
+			<li class="sidebar-item">
+			{% endif %}
+
+				<a class="sidebar-link" href="/CRM/theme/invoice">
+					<i class="align-middle" data-feather="credit-card"></i> <span class="align-middle">Invoice</span>
+				</a>
+			</li>
+
+			{% if page == 'Blank' %}
+			<li class="sidebar-item active">
+			{% else %}
+			<li class="sidebar-item">
+			{% endif %}
+
+				<a class="sidebar-link" href="/CRM/theme/blank">
+					<i class="align-middle" data-feather="book"></i> <span class="align-middle">Blank</span>
+				</a>
+			</li>
+
+			<li class="sidebar-header">
+				Tools & Components
+			</li>
+
+			{% if page == '01-alerts.html' or page == '02-buttons.html' or page == '03-cards.html' or page == '04-general.html' or page == '05-grid.html' or page == '06-modals.html' or page == '07-typography.html'%}
+			<li class="sidebar-item active">
+			{% else %}
+			<li class="sidebar-item">
+			{% endif %}
+
+				<a data-target="#ui" data-toggle="collapse" class="sidebar-link collapsed">
+					<i class="align-middle" data-feather="briefcase"></i> <span class="align-middle">UI Elements</span>
+				</a>
+				<ul id="ui" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+					<li class="sidebar-item"><a class="sidebar-link"
+							href="/CRM/theme/UI_Element/page=01-alerts.html">Alerts</a></li>
+					<li class="sidebar-item"><a class="sidebar-link"
+							href="/CRM/theme/UI_Element/page=02-buttons.html">Buttons</a></li>
+					<li class="sidebar-item"><a class="sidebar-link"
+							href="/CRM/theme/UI_Element/page=03-cards.html">Cards</a></li>
+					<li class="sidebar-item"><a class="sidebar-link"
+							href="/CRM/theme/UI_Element/page=04-general.html">General</a></li>
+					<li class="sidebar-item"><a class="sidebar-link"
+							href="/CRM/theme/UI_Element/page=05-grid.html">Grid</a></li>
+					<li class="sidebar-item"><a class="sidebar-link"
+							href="/CRM/theme/UI_Element/page=06-modals.html">Modals</a></li>
+					<li class="sidebar-item"><a class="sidebar-link"
+							href="/CRM/theme/UI_Element/page=07-typography.html">Typography</a></li>
+				</ul>
+			</li>
+
+			{% if page == 'Icons' %}
+			<li class="sidebar-item active">
+			{% else %}
+			<li class="sidebar-item">
+			{% endif %}
+
+				<a class="sidebar-link" href="/CRM/theme/icons">
+					<i class="align-middle" data-feather="coffee"></i> <span class="align-middle">Icons</span>
+				</a>
+			</li>
+
+			{% if page == '01-layouts.html' or page == '02-basic-inputs'%}
+			<li class="sidebar-item active">
+			{% else %}
+			<li class="sidebar-item">
+			{% endif %}
+
+				<a data-target="#forms" data-toggle="collapse" class="sidebar-link collapsed">
+					<i class="align-middle" data-feather="check-circle"></i> <span class="align-middle">Forms</span>
+				</a>
+				<ul id="forms" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+					<li class="sidebar-item"><a class="sidebar-link" href="/CRM/theme/forms/page=01-layouts.html">Form
+							Layouts</a></li>
+					<li class="sidebar-item"><a class="sidebar-link"
+							href="/CRM/theme/forms/page=02-basic-inputs.html">Basic Inputs</a></li>
+				</ul>
+			</li>
+
+			{% if page == 'Tables' %}
+			<li class="sidebar-item active">
+			{% else %}
+			<li class="sidebar-item">
+			{% endif %}
+
+				<a class="sidebar-link" href="/CRM/theme/tables">
+					<i class="align-middle" data-feather="list"></i> <span class="align-middle">Tables</span>
+				</a>
+			</li>
+
+			<li class="sidebar-header">
+				Plugins & Addons
+			</li>
+
+			{% if page == 'Charts' %}
+			<li class="sidebar-item active">
+			{% else %}
+			<li class="sidebar-item">
+			{% endif %}
+
+				<a class="sidebar-link" href="/CRM/theme/charts">
+					<i class="align-middle" data-feather="bar-chart-2"></i> <span class="align-middle">Charts</span>
+				</a>
+			</li>
+
+			{% if page == 'Maps' %}
+			<li class="sidebar-item active">
+			{% else %}
+			<li class="sidebar-item">
+			{% endif %}
+
+				<a class="sidebar-link" href="/CRM/theme/maps">
+					<i class="align-middle" data-feather="map"></i> <span class="align-middle">Maps</span>
+				</a>
+			</li>
+		</ul>
+		{% endblock %}
+
+		<div class="sidebar-cta">
+			<div class="sidebar-cta-content">
+				<strong class="d-inline-block mb-2">Go to Brand Page</strong>
+				<div class="mb-3 text-sm">
+					브랜드로 이동하시겠습니까?
+				</div>
+				<a href="{% url 'BRAND:index' %}" target="_blank" class="btn btn-primary btn-block">이동</a>
+			</div>
+		</div>
+	</div>
+</nav>

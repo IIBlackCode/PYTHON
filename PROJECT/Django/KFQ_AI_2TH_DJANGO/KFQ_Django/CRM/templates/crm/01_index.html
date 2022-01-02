@@ -1,0 +1,30 @@
+{% extends './include/base_c.html' %}
+{% load static %}
+{% block content %}
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<link href="{% static 'PAGE/DASHBOARD/dashboard.css' %}" rel="stylesheet">
+
+<main class="content">
+	<div class="container-fluid p-0">
+
+		<!-- 수강생 현황 전광판 -->
+		{% include "crm/page/01_index/index_01.html" %}
+		{% include "crm/page/01_index/index_02.html" %}
+
+
+	</div>
+</main>
+
+<script type="text/javascript" src="{% static 'PAGE/DASHBOARD/dashboard.js' %}"></script>
+
+
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+		document.getElementById("datetimepicker-dashboard").flatpickr({
+			inline: true,
+			prevArrow: "<span class=\"fas fa-chevron-left\" title=\"Previous month\"></span>",
+			nextArrow: "<span class=\"fas fa-chevron-right\" title=\"Next month\"></span>",
+		});
+	});
+</script>
+{% endblock %}

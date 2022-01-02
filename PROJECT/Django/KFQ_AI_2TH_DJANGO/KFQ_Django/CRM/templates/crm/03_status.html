@@ -1,0 +1,15 @@
+{% extends './include/base_c.html' %}
+{% load static %}
+{% block content %}
+
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<main class="content">
+	<div class="container-fluid p-0">
+		<!-- 수강생 현황 페이지 -->
+		{% include "crm/page/03_status/status_01.html" %}
+	</div>
+</main>
+<script type="text/javascript" src="{% static 'PAGE/STATUS/search_data.js' %}"></script>
+
+
+{% endblock %}

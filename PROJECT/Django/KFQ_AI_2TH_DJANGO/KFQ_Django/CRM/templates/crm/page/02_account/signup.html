@@ -1,0 +1,133 @@
+{% extends 'crm/include/base_c.html' %}
+{% load static %}
+{% block content %}
+<main class="content">
+
+	
+				<div class="card" > 
+					<div class="card-header">
+
+						<h5 class="card-title mb-0">계정 생성</h5>
+					</div>
+					<div class="card-body">
+						<form method="post" action="{% url 'CRM:signup'%}">
+							{% if messages %}
+							{% for message in messages %}
+							<div class="row" style="margin:20px auto;">
+								<div class="col-sm-12">
+									<div class="alert alert-danger">
+										<strong>{{ message.tags }}!</strong> {{ message.message }}
+									</div>
+								</div>
+							</div>
+							{% endfor %}
+							{% endif %}
+							{% csrf_token %}
+							<div class="row">
+								<div class="col-md-8">
+									<div class="row">
+
+										<div class="mb-3 col-md-6">
+											<label class="form-label" for="name">성명</label>
+											<input type="text" class="form-control" id="name" name="name">
+
+										</div>
+										<div class="mb-3 col-md-6">
+											<label class="form-label" for="birth">생년월일</label>
+											<input type="date" class="form-control" id="birth" name="birth">
+										</div>
+									</div>
+									
+										<div >
+											<label class="form-label" for="form-label" for="email">이메일<span
+													style=" font-size:5px; color: red;">
+													필수 입력 사항
+												</span></label>
+											<input type="text" class="form-control" id="email" name="email">
+										</div>
+										<div class="mb-3 col-md-6" style="margin-top: 20px;">
+											<label class="form-label" for="phone_number">핸드폰 번호<span
+												style=" font-size:5px; color: red;">
+												필수 입력 사항</span></label>
+											<input type="tel" class="form-control" id="phone_number"
+												name="phone_number">
+										</div>
+									<div class="mb-3">
+										<label class="form-label" for="address">주소</label>
+										<input type="text" class="form-control" id="address" name="address">
+									</div>
+									<div class="row">
+										<div>
+											<label class="form-label" for="password">비밀번호<span
+													style=" font-size:5px; color: red;">
+													필수 입력 사항
+												</span></label>
+											<input type="password" class="form-control" id="password" name="password">
+										</div>
+										<div style="margin-top: 20px;">
+											<label class="form-label" for="repassword">비밀번호 확인<span
+													style=" font-size:5px; color: red;">
+													필수 입력 사항
+												</span></label>
+											<input type="password" class="form-control" id="repassword"
+												name="repassword">
+										</div>
+									</div>
+									<div class="row" style="margin-top: 20px;">
+										<div class="mb-3 col-md-4">
+											<label class="form-label" for="university">학교</label>
+											<input type="text" class="form-control" id="university" name="university">
+										</div>
+										<div class="mb-3 col-md-4">
+											<label class="form-label" for="major">전공</label>
+											<input type="text" class="form-control" id="major" name="major">
+										</div>
+										<div class="mb-3 col-md-4">
+											<label class="form-label" for="interest_language">관심 언어</label>
+											<input type="text" class="form-control" id="interest_language"
+												name="interest_language">
+										</div>
+									</div>
+
+									<div class="row">
+										<label class="form-label" for="class_fk">과정명</label>
+										<div class="btn-group">
+											<select type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"
+												aria-haspopup="true" aria-expanded="false" id="class_fk"  name="class_fk" onchange="select_class()">
+												{% for object in list %}
+												<option href="#" value = {{ object.class_id }}>{{ object.class_name }}</option>
+												{% endfor %}
+											</select>
+											<div class="dropdown-menu">
+											</div>
+										</div>
+										<br>
+										<label class="form-label" for="class_fk">사용자 등록</label>
+										<div class="btn-group">
+											<select type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"
+												aria-haspopup="true" aria-expanded="false" id="authority"  name="authority" onchange="select_class()">
+												<option href="#" value = "수강생">수강생</option>
+												<option href="#" value = "관리자" >관리자</option>
+												<option href="#" value = "강사">강사</option>
+											</select>
+											<div class="dropdown-menu">
+											</div>
+										</div>
+				
+										
+										<button class="btn btn-primary btn-block" id="signup" href='/CRM/signin'
+											style="margin-top: 20px; width: 50%; margin-left: 250px; " >회원
+											가입</button>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			
+	
+
+
+</main>
+{% endblock %}
+

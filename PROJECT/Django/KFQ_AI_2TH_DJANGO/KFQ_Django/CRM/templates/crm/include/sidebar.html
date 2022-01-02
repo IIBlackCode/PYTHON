@@ -1,0 +1,76 @@
+{% load static %}
+<nav id="sidebar" class="sidebar">
+	<div class="sidebar-content js-simplebar">
+		<a class="sidebar-brand" href="/CRM/index"><span class="align-middle">We're Here</span></a>
+
+		<ul class="sidebar-nav">
+			<li class="sidebar-header">
+				Pages
+			</li>
+			<!-- Nav List Start -->
+			{% block content %}
+{% if request.session.email %}
+			{% if page == 'Dashboard' %}
+			<li class="sidebar-item active">
+			{% else %}
+			<li class="sidebar-item">
+			{% endif %}
+				<a class="sidebar-link" href="{% url 'CRM:index' %}">
+					<i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
+				</a>
+			</li>
+
+			{% if page == 'Profile' or page == 'Settings' %}
+			<li class="sidebar-item active">
+			{% else %}
+			<li class="sidebar-item">
+			{% endif %}
+				<a data-target="#mypage" data-toggle="collapse" class="sidebar-link collapsed">
+					<i class="align-middle" data-feather="user"></i> <span class="align-middle">MyPage</span>
+				</a>
+				<!-- MyPage 세부 List -->
+				<ul id="mypage" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+					<li class="sidebar-item"><a class="sidebar-link" href="/CRM/profile">Profile</a></li>
+					<li class="sidebar-item"><a class="sidebar-link" href="/CRM/settings">Settings</a></li>
+				</ul>
+			</li>
+
+			{% if page == 'status' %}
+			<li class="sidebar-item active">
+			{% else %}
+			<li class="sidebar-item">
+			{% endif %}
+				<a class="sidebar-link" href="{% url 'CRM:status' %}">
+					<i class="align-middle" data-feather="book"></i> <span class="align-middle">수강생 현황</span>
+				</a>
+			<!--
+				<a class="sidebar-link" href="/CRM/status">
+					<i class="align-middle" data-feather="book"></i> <span class="align-middle">수강생 현황</span>
+				</a>-->
+			</li>
+
+
+			{% if page == 'SeatingChart' %}
+			<li class="sidebar-item active">
+			{% else %}
+			<li class="sidebar-item">
+			{% endif %}
+				<a class="sidebar-link" href="/CRM/seatingChart">
+					<i class="align-middle" data-feather="book"></i> <span class="align-middle">반별 좌석배치도</span>
+				</a>
+			</li>
+{% else %}
+{% endif %}
+		{% endblock %}
+
+		<div class="sidebar-cta">
+			<div class="sidebar-cta-content">
+				<strong class="d-inline-block mb-2">Go to Brand Page</strong>
+				<div class="mb-3 text-sm">
+					브랜드로 이동하시겠습니까?
+				</div>
+				<a href="{% url 'BRAND:index' %}" target="_blank" class="btn btn-primary btn-block">이동</a>
+			</div>
+		</div>
+	</div>
+</nav>

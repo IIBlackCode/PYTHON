@@ -1,0 +1,44 @@
+<div class="row">
+    <div class="col-12 col-md-6 col-xxl-3 d-flex order-1 order-xxl-1">
+        <div class="card flex-fill">
+            <div class="card-body d-flex">
+                <div class="align-self-center w-100">
+                    <div class="chart">
+                        <div id="datetimepicker-dashboard"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-lg-8 col-xxl-9 d-flex">
+        <div class="card flex-fill scroll_student_DIV">
+           
+            <table class="table table-hover my-0" id="studentListTable">
+                <thead>
+                    <tr>
+                        <th>수강생 이름</th>
+                        <th class="d-none d-md-table-cell">체온</th>
+                        <th class="d-none d-xl-table-cell">입실시간</th>
+                        <th class="d-none d-xl-table-cell">퇴실시간</th>
+                        <th>상태</th>
+                        <th class="d-none d-md-table-cell">수강 과정</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for object in studentList %}
+                    <tr>
+                        <td>{{object.member_fk.name}}</td>                
+                        <td>{{object.temperature}}</td>                
+                        <td>{{object.input_time}}</td>                
+                        <td>{{object.output_time}}</td>                
+                        <td>{{object.}}</td>                
+                        <td>{{object.}}</td>                
+                    </tr>
+                {% endfor%}
+                   
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

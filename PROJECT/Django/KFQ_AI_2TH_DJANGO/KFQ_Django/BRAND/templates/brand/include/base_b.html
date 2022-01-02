@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    {% include "brand/include/head.html" %}
+    <title>We're Here, KFQ team prj2 webprj</title>
+</head>
+<body class="host_version"> 
+	{% include "brand/include/header.html" %}
+    {% block content %}
+    {% endblock %}
+	{% include "brand/include/footer.html" %}
+
+    <!-- ALL JS FILES -->
+    <script src="{% static 'js/all.js' %}"></script>
+    <!-- ALL PLUGINS -->
+    <script src="{% static 'js/custom.js' %}"></script>
+
+</body>
+</html>

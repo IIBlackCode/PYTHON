@@ -1,0 +1,30 @@
+{% extends "crm/include/base_c.html" %}
+{% load static %}
+{% block content %}
+<main class="content">
+    <div class="jumbotron">
+
+        <div class="container text-center">
+            <div>
+                <form method="post" action="/CRM/signin/">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        
+                        <input type="text" class="form-control" id="email" name="email" placeholder="email" >
+                    </div>
+                    <br>
+
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="password" name="password" placeholder="password">
+                    </div>
+                    <small><a href="/CRM/signin/find_password/">비밀번호를 잊으셨나요?</a></small>
+                    <button class="btn btn-primary btn-block" id="signin" style="margin-top: 20px;">Sign
+                        in</button>
+                    <button type="button" class="btn btn-primary" onClick="location.href='/CRM/signup'" style="margin-top: 20px;">계정 만들기</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</main>
+{% endblock %}

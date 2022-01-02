@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Responsive Admin &amp; Dashboard Template based on Bootstrap 5">
+	<meta name="author" content="AdminKit">
+	<meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
+	{% comment %} <meta http-equiv="refresh" content="5"> {% endcomment %}
+	
+	<link rel="shortcut icon" href="{% static 'img/icons/icon-48x48.png' %}" />
+	<link rel="stylesheet" href="{% static 'PAGE/seatingChart/leaflet/leaflet.css' %}"/>
+    <script src="{% static 'PAGE/seatingChart/leaflet/leaflet-src.js' %}"></script>
+
+	<link rel="stylesheet" href="{% static 'PAGE/seatingChart/leaflet/leaflet.rrose.css' %}"/>
+    <script src="{% static 'PAGE/seatingChart/leaflet/leaflet.rrose-src.js' %}"></script>
+
+	<title>We're Here, KFQ team prj2 webprj</title>
+
+	<link href="{% static 'css/app.css' %}" rel="stylesheet">
+</head>
+
+<body>
+	<div class="wrapper">
+		<!-- SIDEBAR -->
+		{% include "crm/include/sidebar.html" %}
+		<div class="main">
+			{% include "crm/include/navbar.html" %}
+			{% block content %}
+            {% endblock %}
+			{% include "crm/include/footer_c.html" %}
+		</div>
+	</div>
+	<script src="{% static 'js/app.js' %}"></script>
+</body>
+<script type="text/javascript" src="{% static 'PAGE/seatingChart/seatingChart.js' %}"></script>
+
+</html>

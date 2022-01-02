@@ -1,0 +1,53 @@
+{% extends './page/05_seatingChart/leafletmap.html' %}
+{% load static %}
+{% block content %}
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<main class="content">
+		<div class="container-fluid p-0">
+			<h1 class="h3 mb-3">
+
+				<div class="btn-group">
+                    <select type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false" id="select_class" onchange="select_class()">
+                        
+                        <option class="dropdown-item" href="#" value = 1>AI 인공지능</option>
+                        <option class="dropdown-item" href="#" value = 2>빅데이터</option>
+                        <option class="dropdown-item" href="#" value = 3>스마트팩토리</option>
+                    </select>
+                </div>
+
+			</h1>
+			<div class="row">
+				<div class="col-12">
+					<div class="card">
+						<div class="card-body">
+							<div id="map" style="height:680px;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</main>
+
+	<script type="text/javascript" src="{% static 'PAGE/seatingChart/leaflet_seat.js' %}"></script>
+
+	<script>
+	
+		// 우측 상위 반 선택 기능 추가하기
+		// var baseMaps = {
+		// "AI개발자": L.imageOverlay(imgurl, bounds),
+		// "빅데이터분석": L.imageOverlay(imgurl, bounds),
+		// "스마트팩토리": L.imageOverlay(imgurl, bounds)
+		// }
+		// L.control.layers(baseMaps).addTo(map);
+		// map.on("baselayerchange", (event) => {
+		// 	console.log(event.name); // 변경 후의 층수를 출력한다.
+			// 층별 처리를 구현한다.
+		// });
+		// //map.addLayer(baseMaps["15F"]);
+		// map.fitBounds(bounds);
+	
+	</script>
+
+{% endblock %}

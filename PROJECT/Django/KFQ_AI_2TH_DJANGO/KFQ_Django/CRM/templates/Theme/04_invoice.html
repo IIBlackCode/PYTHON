@@ -1,0 +1,182 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Responsive Admin &amp; Dashboard Template based on Bootstrap 5">
+	<meta name="author" content="AdminKit">
+	<meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
+
+	<link rel="shortcut icon" href="{% static 'img/icons/icon-48x48.png' %}" />
+
+	<title>Invoice | AdminKit Demo</title>
+
+	<link href="{% static 'css/app.css' %}" rel="stylesheet">
+</head>
+
+<body>
+	<div class="wrapper">
+
+		<!-- SIDEBAR -->
+		{% include "theme/include/sidebar.html" %}
+
+		<div class="main">
+			{% include "theme/include/navbar.html" %}
+
+
+			<main class="content">
+				<div class="container-fluid p-0">
+
+					<h1 class="h3 mb-3">Invoice</h1>
+
+					<div class="row">
+						<div class="col-12">
+							<div class="card">
+								<div class="card-body m-sm-3 m-md-5">
+									<div class="mb-4">
+										Hello <strong>Charles Hall</strong>,
+										<br /> This is the receipt for a payment of <strong>$268.00</strong> (USD) you made to AdminKit Demo.
+									</div>
+
+									<div class="row">
+										<div class="col-md-6">
+											<div class="text-muted">Payment No.</div>
+											<strong>741037024</strong>
+										</div>
+										<div class="col-md-6 text-md-right">
+											<div class="text-muted">Payment Date</div>
+											<strong>October 2, 2018 - 03:45 pm</strong>
+										</div>
+									</div>
+
+									<hr class="my-4" />
+
+									<div class="row mb-4">
+										<div class="col-md-6">
+											<div class="text-muted">Client</div>
+											<strong>
+              Charles Hall
+            </strong>
+											<p>
+												4183 Forest Avenue <br> New York City <br> 10011 <br> USA <br>
+												<a href="#">
+                chris.wood@gmail.com
+              </a>
+											</p>
+										</div>
+										<div class="col-md-6 text-md-right">
+											<div class="text-muted">Payment To</div>
+											<strong>
+              AdminKit Demo LLC
+            </strong>
+											<p>
+												354 Roy Alley <br> Denver <br> 80202 <br> USA <br>
+												<a href="#">
+                info@adminkit.com
+              </a>
+											</p>
+										</div>
+									</div>
+
+									<table class="table table-sm">
+										<thead>
+											<tr>
+												<th>Description</th>
+												<th>Quantity</th>
+												<th class="text-right">Amount</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>AdminKit Demo Theme Customization</td>
+												<td>2</td>
+												<td class="text-right">$150.00</td>
+											</tr>
+											<tr>
+												<td>Monthly Subscription </td>
+												<td>3</td>
+												<td class="text-right">$25.00</td>
+											</tr>
+											<tr>
+												<td>Additional Service</td>
+												<td>1</td>
+												<td class="text-right">$100.00</td>
+											</tr>
+											<tr>
+												<th>&nbsp;</th>
+												<th>Subtotal </th>
+												<th class="text-right">$275.00</th>
+											</tr>
+											<tr>
+												<th>&nbsp;</th>
+												<th>Shipping </th>
+												<th class="text-right">$8.00</th>
+											</tr>
+											<tr>
+												<th>&nbsp;</th>
+												<th>Discount </th>
+												<th class="text-right">5%</th>
+											</tr>
+											<tr>
+												<th>&nbsp;</th>
+												<th>Total </th>
+												<th class="text-right">$268.85</th>
+											</tr>
+										</tbody>
+									</table>
+
+									<div class="text-center">
+										<p class="text-sm">
+											<strong>Extra note:</strong> Please send all items at the same time to the shipping address. Thanks in advance.
+										</p>
+
+										<a href="#" class="btn btn-primary">
+            Print this receipt
+          </a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</main>
+
+			<footer class="footer">
+				<div class="container-fluid">
+					<div class="row text-muted">
+						<div class="col-6 text-left">
+							<p class="mb-0">
+								<a href="index.html" class="text-muted"><strong>AdminKit Demo</strong></a> &copy;
+							</p>
+						</div>
+						<div class="col-6 text-right">
+							<ul class="list-inline">
+								<li class="list-inline-item">
+									<a class="text-muted" href="#">Support</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="text-muted" href="#">Help Center</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="text-muted" href="#">Privacy</a>
+								</li>
+								<li class="list-inline-item">
+									<a class="text-muted" href="#">Terms</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</div>
+
+	<script src="{% static 'js/app.js' %}"></script>
+
+</body>
+
+</html>

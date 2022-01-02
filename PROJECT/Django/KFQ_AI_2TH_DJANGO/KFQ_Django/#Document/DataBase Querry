@@ -1,0 +1,241 @@
+INSERT INTO CRM_classlist (class_name, student_count, open_date, close_date, status)
+VALUES('AI인공지능',25,'2021-04-26','2021-10-30', '진행중');
+INSERT INTO CRM_classlist (class_name, student_count, open_date, close_date, status)
+VALUES('빅데이터',25,'2021-04-26','2021-10-30', '진행중');
+INSERT INTO CRM_classlist (class_name, student_count, open_date, close_date, status)
+VALUES('스마트펙토리',25,'2021-04-26','2021-10-30', '진행중');
+
+#AI 수강생 테스트 데이터
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('AI1','password','AI1',25,1,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('AI2','password','AI2',25,1,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('AI3','password','AI3',25,1,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('AI4','password','AI4',25,1,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('AI5','password','AI5',25,1,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('AI6','password','AI6',25,1,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('AI7','password','AI7',25,1,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('AI8','password','AI8',25,1,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('AI9','password','AI9',25,1,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('AI10','password','AI10',21,1,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('AI11','password','AI11',25,1,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('AI12','password','AI12',25,1,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('AI13','password','AI13',25,1,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('AI14','password','AI14',25,1,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('AI15','password','AI15',25,1,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('AI16','password','AI16',25,1,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('AI17','password','AI17',25,1,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('AI18','password','AI18',25,1,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('AI19','password','AI19',25,1,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('AI20','password','AI20',25,1,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('AI21','password','AI21',25,1,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('AI22','password','AI22',25,1,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('AI23','password','AI23',25,1,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('AI24','password','AI24',25,1,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('AI25','password','AI25',25,1,'수강생');
+
+#빅데이터 수강생 테스트 데이터
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('bitdata1','password','빅데이터1',25,2,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('bitdata2','password','빅데이터2',25,2,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('bitdata3','password','빅데이터3',25,2,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('bitdata4','password','빅데이터4',25,2,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('bitdata5','password','빅데이터5',25,2,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('bitdata6','password','빅데이터6',25,2,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('bitdata7','password','빅데이터7',25,2,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('bitdata8','password','빅데이터8',25,2,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('bitdata9','password','빅데이터9',25,2,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('bitdata10','password','빅데이터10',25,2,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('bitdata11','password','빅데이터11',25,2,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('bitdata12','password','빅데이터12',25,2,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('bitdata13','password','빅데이터13',25,2,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('bitdata14','password','빅데이터14',25,2,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('bitdata15','password','빅데이터15',25,2,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('bitdata16','password','빅데이터16',25,2,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('bitdata17','password','빅데이터17',25,2,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('bitdata18','password','빅데이터18',25,2,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('bitdata19','password','빅데이터19',25,2,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('bitdata20','password','빅데이터20',25,2,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('bitdata21','password','빅데이터21',25,2,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('bitdata22','password','빅데이터22',25,2,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('bitdata23','password','빅데이터23',25,2,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('bitdata24','password','빅데이터24',25,2,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('bitdata25','password','빅데이터25',25,2,'수강생');
+
+#스마트펙토리 수강생 테스트 데이터
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('스마트펙토리1','password','스마트펙토리1',25,3,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('스마트펙토리2','password','스마트펙토리2',25,3,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('스마트펙토리3','password','스마트펙토리3',25,3,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('스마트펙토리4','password','스마트펙토리4',25,3,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('스마트펙토리5','password','스마트펙토리5',25,3,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('스마트펙토리6','password','스마트펙토리6',25,3,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('스마트펙토리7','password','스마트펙토리7',25,3,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('스마트펙토리8','password','스마트펙토리8',25,3,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('스마트펙토리9','password','스마트펙토리9',25,3,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('스마트펙토리10','password','스마트펙토리10',25,3,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('스마트펙토리11','password','스마트펙토리11',25,3,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('스마트펙토리12','password','스마트펙토리12',25,3,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('스마트펙토리13','password','스마트펙토리13',25,3,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('스마트펙토리14','password','스마트펙토리14',25,3,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('스마트펙토리15','password','스마트펙토리15',25,3,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('스마트펙토리16','password','스마트펙토리16',25,3,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('스마트펙토리17','password','스마트펙토리17',25,3,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('스마트펙토리18','password','스마트펙토리18',25,3,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('스마트펙토리19','password','스마트펙토리19',25,3,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('스마트펙토리20','password','스마트펙토리20',25,3,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('스마트펙토리21','password','스마트펙토리21',25,3,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('스마트펙토리22','password','스마트펙토리22',25,3,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('스마트펙토리23','password','스마트펙토리23',25,3,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('스마트펙토리24','password','스마트펙토리24',25,3,'수강생');
+INSERT INTO CRM_member (email, password, name, age,class_fk_id,authority)
+VALUES('스마트펙토리25','password','스마트펙토리25',25,3,'수강생');
+
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'Y', 'N', 'N', 'N', '2021-07-06 8:35', '2021-07-06 17:59', '', '', '36.5', 1,'AI1');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'Y', 'N', 'Y', 'N', '2021-07-06 8:36', '2021-07-06 18:05', '', '', '36.5', 1,'AI2');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'Y', 'N', 'N', 'N', '2021-07-06 8:37', '2021-07-06 18:05', '', '', '36.5', 1,'AI3');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'Y', 'N', 'Y', 'N', '2021-07-06 8:38', '2021-07-06 18:05', '', '', '36.5', 1,'AI4');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'Y', 'N', 'Y', 'N', '2021-07-06 8:40', '2021-07-06 18:05', '', '', '36.5', 1,'AI5');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'N', 'N', 'Y', 'N', '2021-07-06 8:46', '2021-07-06 18:14', '', '', '36.5', 1,'AI6');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'N', 'Y', 'Y', 'N', '2021-07-06 8:48', '2021-07-06 18:14', '', '', '36.5', 1,'AI7');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'N', 'Y', 'N', 'N', '2021-07-06 8:51', '2021-07-06 18:14', '', '', '36.5', 1,'AI8');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'N', 'N', 'N', 'Y', '2021-07-06 8:54', '2021-07-06 15:21', '', '', '36.5', 1,'AI9');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'Y', 'Y', 'Y', 'Y', '2021-07-06 9:56', '2021-07-06 18:14', '', '', '36.5', 1,'AI10');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'N', 'Y', 'Y', 'Y', '2021-07-06 9:57', '2021-07-06 18:14', '', '', '36.5', 1,'AI11');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'Y', 'Y', 'N', 'N', '2021-07-06 9:58', '2021-07-06 18:14', '', '', '36.5', 1,'AI12');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'Y', 'Y', 'Y', 'Y', '2021-07-06 9:59', '2021-07-06 18:14', '', '', '36.5', 1,'AI13');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'Y', 'N', 'N', 'N', '2021-07-06 9:28', '2021-07-06 18:14', '', '', '36.5', 1,'AI14');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'Y', 'N', 'N', 'N', '2021-07-06 9:28', '2021-07-06 18:14', '', '', '36.5', 1,'AI15');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'Y', 'N', 'Y', 'Y', '2021-07-06 9:57', '2021-07-06 15:28', '', '', '36.5', 1,'AI16');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'Y', 'N', 'N', 'Y', '2021-07-06 9:57', '2021-07-06 18:14', '', '', '36.5', 1,'AI17');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'N', 'Y', 'N', 'N', '2021-07-06 9:57', '2021-07-06 18:14', '', '', '36.5', 1,'AI18');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'Y', 'N', 'Y', 'N', '2021-07-06 9:57', '2021-07-06 18:14', '', '', '36.5', 1,'AI19');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'N', 'N', 'N', 'Y', '2021-07-06 9:57', '2021-07-06 18:14', '', '', '36.5', 1,'AI20');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'N', 'Y', 'Y', 'N', '2021-07-06 9:57', '2021-07-06 18:14', '', '', '36.5', 1,'AI21');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'N', 'N', 'N', 'Y', '2021-07-06 9:57', '2021-07-06 18:14', '', '', '36.5', 1,'AI22');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'N', 'Y', 'N', 'N', '2021-07-06 9:57', '2021-07-06 18:14', '', '', '36.5', 1,'AI23');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'Y', 'N', 'N', 'Y', '2021-07-06 9:57', '2021-07-06 18:14', '', '', '36.5', 1,'AI24');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'N', 'N', 'N', 'Y', '2021-07-06 9:57', '2021-07-06 18:14', '', '', '36.5', 1,'AI25');
+
+
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'Y', 'N', 'N', 'N', '2021-07-06 8:35', '2021-07-06 17:59', '', '', '36.5', 2,'bitdata1');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'Y', 'N', 'Y', 'N', '2021-07-06 8:36', '2021-07-06 18:05', '', '', '36.5', 2,'bitdata2');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'Y', 'N', 'N', 'N', '2021-07-06 8:37', '2021-07-06 18:05', '', '', '36.5', 2,'bitdata3');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'Y', 'N', 'Y', 'N', '2021-07-06 8:38', '2021-07-06 18:05', '', '', '36.5', 2,'bitdata4');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'Y', 'N', 'Y', 'N', '2021-07-06 8:40', '2021-07-06 18:05', '', '', '36.5', 2,'bitdata5');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'N', 'N', 'Y', 'N', '2021-07-06 8:46', '2021-07-06 18:14', '', '', '36.5', 2,'bitdata6');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'N', 'Y', 'Y', 'N', '2021-07-06 8:48', '2021-07-06 18:14', '', '', '36.5', 2,'bitdata7');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'N', 'Y', 'N', 'N', '2021-07-06 8:51', '2021-07-06 18:14', '', '', '36.5', 2,'bitdata8');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'N', 'N', 'N', 'Y', '2021-07-06 8:54', '2021-07-06 15:21', '', '', '36.5', 2,'bitdata9');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'Y', 'Y', 'Y', 'Y', '2021-07-06 9:56', '2021-07-06 18:14', '', '', '36.5', 2,'bitdata10');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'N', 'Y', 'Y', 'Y', '2021-07-06 9:57', '2021-07-06 18:14', '', '', '36.5', 2,'bitdata11');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'Y', 'Y', 'N', 'N', '2021-07-06 9:58', '2021-07-06 18:14', '', '', '36.5', 2,'bitdata12');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'Y', 'Y', 'Y', 'Y', '2021-07-06 9:59', '2021-07-06 18:14', '', '', '36.5', 2,'bitdata13');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'Y', 'N', 'N', 'N', '2021-07-06 9:28', '2021-07-06 18:14', '', '', '36.5', 2,'bitdata14');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'Y', 'N', 'N', 'N', '2021-07-06 9:28', '2021-07-06 18:14', '', '', '36.5', 2,'bitdata15');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'Y', 'N', 'Y', 'Y', '2021-07-06 9:57', '2021-07-06 15:28', '', '', '36.5', 2,'bitdata16');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'Y', 'N', 'N', 'Y', '2021-07-06 9:57', '2021-07-06 18:14', '', '', '36.5', 2,'bitdata17');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'N', 'Y', 'N', 'N', '2021-07-06 9:57', '2021-07-06 18:14', '', '', '36.5', 2,'bitdata18');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'Y', 'N', 'Y', 'N', '2021-07-06 9:57', '2021-07-06 18:14', '', '', '36.5', 2,'bitdata19');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'N', 'N', 'N', 'Y', '2021-07-06 9:57', '2021-07-06 18:14', '', '', '36.5', 2,'bitdata20');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'N', 'Y', 'Y', 'N', '2021-07-06 9:57', '2021-07-06 18:14', '', '', '36.5', 2,'bitdata21');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'N', 'N', 'N', 'Y', '2021-07-06 9:57', '2021-07-06 18:14', '', '', '36.5', 2,'bitdata22');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'N', 'Y', 'N', 'N', '2021-07-06 9:57', '2021-07-06 18:14', '', '', '36.5', 2,'bitdata23');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'Y', 'N', 'N', 'Y', '2021-07-06 9:57', '2021-07-06 18:14', '', '', '36.5', 2,'bitdata24');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'N', 'N', 'N', 'Y', '2021-07-06 9:57', '2021-07-06 18:14', '', '', '36.5', 2,'bitdata25');
+
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'Y', 'N', 'N', 'N', '2021-07-06 8:35', '2021-07-06 17:59', '', '', '36.5', 3,'스마트펙토리1');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'Y', 'N', 'Y', 'N', '2021-07-06 8:36', '2021-07-06 18:05', '', '', '36.5', 3,'스마트펙토리2');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'Y', 'N', 'N', 'N', '2021-07-06 8:37', '2021-07-06 18:05', '', '', '36.5', 3,'스마트펙토리3');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'Y', 'N', 'Y', 'N', '2021-07-06 8:38', '2021-07-06 18:05', '', '', '36.5', 3,'스마트펙토리4');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'Y', 'N', 'Y', 'N', '2021-07-06 8:40', '2021-07-06 18:05', '', '', '36.5', 3,'스마트펙토리5');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'N', 'N', 'Y', 'N', '2021-07-06 8:46', '2021-07-06 18:14', '', '', '36.5', 3,'스마트펙토리6');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'N', 'Y', 'Y', 'N', '2021-07-06 8:48', '2021-07-06 18:14', '', '', '36.5', 3,'스마트펙토리7');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'N', 'Y', 'N', 'N', '2021-07-06 8:51', '2021-07-06 18:14', '', '', '36.5', 3,'스마트펙토리8');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'N', 'N', 'N', 'Y', '2021-07-06 8:54', '2021-07-06 15:21', '', '', '36.5', 3,'스마트펙토리9');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'Y', 'Y', 'Y', 'Y', '2021-07-06 9:56', '2021-07-06 18:14', '', '', '36.5', 3,'스마트펙토리10');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'N', 'Y', 'Y', 'Y', '2021-07-06 9:57', '2021-07-06 18:14', '', '', '36.5', 3,'스마트펙토리11');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'Y', 'Y', 'N', 'N', '2021-07-06 9:58', '2021-07-06 18:14', '', '', '36.5', 3,'스마트펙토리12');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'Y', 'Y', 'Y', 'Y', '2021-07-06 9:59', '2021-07-06 18:14', '', '', '36.5', 3,'스마트펙토리13');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'Y', 'N', 'N', 'N', '2021-07-06 9:28', '2021-07-06 18:14', '', '', '36.5', 3,'스마트펙토리14');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'Y', 'N', 'N', 'N', '2021-07-06 9:28', '2021-07-06 18:14', '', '', '36.5', 3,'스마트펙토리15');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'Y', 'N', 'Y', 'Y', '2021-07-06 9:57', '2021-07-06 15:28', '', '', '36.5', 3,'스마트펙토리16');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'Y', 'N', 'N', 'Y', '2021-07-06 9:57', '2021-07-06 18:14', '', '', '36.5', 3,'스마트펙토리17');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'N', 'Y', 'N', 'N', '2021-07-06 9:57', '2021-07-06 18:14', '', '', '36.5', 3,'스마트펙토리18');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'Y', 'N', 'Y', 'N', '2021-07-06 9:57', '2021-07-06 18:14', '', '', '36.5', 3,'스마트펙토리19');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'N', 'N', 'N', 'Y', '2021-07-06 9:57', '2021-07-06 18:14', '', '', '36.5', 3,'스마트펙토리20');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'N', 'Y', 'Y', 'N', '2021-07-06 9:57', '2021-07-06 18:14', '', '', '36.5', 3,'스마트펙토리21');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'N', 'N', 'N', 'Y', '2021-07-06 9:57', '2021-07-06 18:14', '', '', '36.5', 3,'스마트펙토리22');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'N', 'Y', 'N', 'N', '2021-07-06 9:57', '2021-07-06 18:14', '', '', '36.5', 3,'스마트펙토리23');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'Y', 'N', 'N', 'Y', '2021-07-06 9:57', '2021-07-06 18:14', '', '', '36.5', 3,'스마트펙토리24');
+INSERT INTO "main"."CRM_student_list" ( "date", "attendance", "absent", "late", "early", "input_time", "output_time", "total_time_outing", "total_time", "temperature", "class_fk_id", "member_fk_id") VALUES ('2021-07-06', 'N', 'N', 'N', 'Y', '2021-07-06 9:57', '2021-07-06 18:14', '', '', '36.5', 3,'스마트펙토리25');

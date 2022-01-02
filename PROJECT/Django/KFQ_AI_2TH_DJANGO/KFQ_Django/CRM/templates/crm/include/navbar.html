@@ -1,0 +1,45 @@
+{% load static %}
+<nav class="navbar navbar-expand navbar-light navbar-bg">
+	<a class="sidebar-toggle d-flex" ><i class="hamburger align-self-center"></i></a>
+	
+		
+	
+	<div class="navbar-collapse collapse" style="text-align:center;">
+	
+		<MARQUEE behavior="scroll">*필수 사항* 퇴실 시, 꼭 퇴실 체크 해주세요.</MARQUEE>
+		<ul class="navbar-nav navbar-align">
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-toggle="dropdown">
+					<i class="align-middle" data-feather="settings"></i>
+				</a>
+				{% if request.session.name %}
+				<a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-toggle="dropdown">
+					<span class="text-dark"> {{ request.session.name }}</span>
+				</a>
+				{% else %}
+				<a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-toggle="dropdown">
+					<span class="text-dark">로그인 하세요.</span>
+				</a>
+				{% endif %}
+				<div class="dropdown-menu dropdown-menu-right">
+					{% if request.session.email %}
+						<a class="dropdown-item" href="{% url 'CRM:profile' %}"><i class="align-middle mr-1"
+								data-feather="user"></i> 프로필</a>
+						<a class="dropdown-item" href="{% url 'CRM:settings' %}"><i class="align-middle mr-1"
+								data-feather="settings"></i> 세팅</a>
+						<a class="dropdown-item" href="{% url 'BRAND:contact' %}"><i class="align-middle mr-1" data-feather="help-circle"></i> Help
+							Center</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="{% url 'CRM:signout' %}">로그아웃</a>
+					{% else %}
+						<a class="dropdown-item" href="{% url 'BRAND:contact' %}"><i class="align-middle mr-1" data-feather="help-circle"></i> Help
+							Center</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="{% url 'CRM:signin' %}">로그인</a>
+					{% endif %}
+				</div>
+			</li>
+		</ul>
+	</div>
+</nav>

@@ -1,0 +1,42 @@
+pip install django
+python -m pip install --upgrade pip
+
+2021-06-17
+    - Create Django Project
+    - Create APP [BRAND, ERP]
+    - HTML Template synchronization
+
+2021-06-19
+    - BRAN APP Template 완료
+
+2021-06-20
+    - ERP APP Template 완료
+
+2021-06-21
+    - Logo 클릭시 404뜨는 에러 수정 (header가 6개 > 1개로 줄이는 방법 모색)
+
+2021-06-22
+    - BRAND, ERP PAGE 디자인
+    - ERP 기능별 메뉴 생성
+    - ERP Dashboard 수정
+
+2021-06-23
+    - ERP > CRM APP name 변경
+    - BRAND PAGE MAIN 이미지 미출력 수정
+    - BRAND template header.html 한개로 수정 > 추후 header 폴더 삭제
+    - CRM template sidebar.html 한개로 수정 > 추후 sidebar 폴더 삭제
+
+2021-06-24
+    - ERP App > CRM으로 수정
+
+2021-06-25
+    -
+
+2021-06-26
+    - 정탁이가 수정한 header 이미지 적용
+    - Git 적용 테스트
+
+2021-06-27
+    - BRAND Template 원본과 분리
+    - CRM Template 원본과 분리
+    

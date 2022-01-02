@@ -1,0 +1,462 @@
+{% extends './include/base_b.html' %}
+{% load static %}
+{% block content %}
+
+    <div id="carouselExampleControls" class="carousel slide bs-slider box-slider" data-ride="carousel" data-pause="hover" data-interval="false" >
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
+			<li data-target="#carouselExampleControls" data-slide-to="1"></li>
+			<li data-target="#carouselExampleControls" data-slide-to="2"></li>
+		</ol>
+		<div class="carousel-inner" role="listbox">
+			<div class="carousel-item active">
+				<div id="home" class="first-section" style="background-image:url({% static 'images/slider-01.jpg' %});">
+					<div class="dtab">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12 col-sm-12 text-right">
+									<div class="big-tagline">
+										<h2><strong>Python Web Django</strong> Project</h2>
+										<p class="lead">한국품질재단 제 2차 프로젝트.</p>
+											<a href="{% url 'BRAND:contact' %}" class="hover-btn-new"><span>연락처</span></a>
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											<a href="{% url 'BRAND:about' %}" class="hover-btn-new"><span>자세히</span></a>
+									</div>
+								</div>
+							</div><!-- end row -->            
+						</div><!-- end container -->
+					</div>
+				</div><!-- end section -->
+			</div>
+			<div class="carousel-item">
+				<div id="home" class="first-section" style="background-image:url({% static 'images/slider-02.jpg' %});">
+					<div class="dtab">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12 col-sm-12 text-left">
+									<div class="big-tagline">
+										<h2 data-animation="animated zoomInRight"><strong>수강생 관리</strong>프로그램</h2>
+										<p class="lead" data-animation="animated fadeInLeft">수강생을 쉽게 관리할 수 있는 All-in-One 프로그램</p>
+											<a href="{% url 'BRAND:contact' %}" class="hover-btn-new"><span>연락처</span></a>
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											<a href="{% url 'BRAND:about' %}" class="hover-btn-new"><span>자세히</span></a>
+									</div>
+								</div>
+							</div><!-- end row -->            
+						</div><!-- end container -->
+					</div>
+				</div><!-- end section -->
+			</div>
+            <div class="carousel-item">
+				<div id="home" class="first-section" style="background-image:url({% static 'images/slider-03.jpg' %});">
+					<div class="dtab">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12 col-sm-12 text-center">
+									<div class="big-tagline">
+										<h2 data-animation="animated zoomInRight"><strong>Thanks to</strong> 김남현, 구정은 강사님</h2>
+										<p class="lead" data-animation="animated fadeInLeft">취업을 향해!!!! 한국품질재단 AI 개발자 과정 화이팅!!!</p>
+											<a href="{% url 'BRAND:contact' %}" class="hover-btn-new"><span>연락처</span></a>
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											<a href="{% url 'BRAND:about' %}" class="hover-btn-new"><span>자세히</span></a>
+									</div>
+								</div>
+							</div><!-- end row -->            
+						</div><!-- end container -->
+					</div>
+				</div><!-- end section -->
+			</div>
+
+			<!-- Left Control -->
+			<a class="new-effect carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+				<span class="fa fa-angle-left" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+
+			<!-- Right Control -->
+			<a class="new-effect carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+				<span class="fa fa-angle-right" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+	</div>
+	
+	
+	<div id="domain" class="section wb">
+        <div class="container">
+            <div class="row text-center">
+
+                <div class="col-lg-12">
+                    <form class="checkdomain form-inline">
+                        <div class="checkdomain-wrapper">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="domainnamehere" placeholder="검색창에서 WeAreHere를 검색하세요!">
+                                <button type="submit" class="btn btn-primary grd1"><i class="fa fa-search"></i></button>
+                            </div>
+                            {% comment %} <hr>
+                            <div class="clearfix"></div>
+                            <div class="checkbox checkbox-warning">
+                                <input id="domaincom" type="checkbox" class="styled" checked>
+                                <label for="domaincom">.com</label>
+                            </div>
+                            <div class="checkbox checkbox-warning">
+                                <input id="domainnet" type="checkbox" class="styled" checked>
+                                <label for="domainnet">.net</label>
+                            </div>
+                            <div class="checkbox checkbox-warning">
+                                <input id="domainorg" type="checkbox" class="styled">
+                                <label for="domainorg">.org</label>
+                            </div>
+                            <div class="checkbox checkbox-warning">
+                                <input id="domaintv" type="checkbox" class="styled">
+                                <label for="domaintv">.tv</label>
+                            </div>
+                            <div class="checkbox checkbox-warning">
+                                <input id="domaininfo" type="checkbox" class="styled">
+                                <label for="domaininfo">.info</label>
+                            </div> {% endcomment %}
+                        </div><!-- end checkdomain-wrapper -->
+                    </form>
+                </div>
+                
+				{% comment %} <div class="col-lg-12">
+                    <div class="customwidget text-center">
+                        <h1>뭐라쓰지</h1>
+                        <p>설명을</p>
+						<p>뭐라해야 칭찬받을지</p>
+                        <ul class="list-inline">
+                            <li><i class="fa fa-check"></i>다같이</li>
+                            <li><i class="fa fa-check"></i>고민해봅시다</li>
+                        </ul>
+                        <!-- end list -->
+                        <a href="#" class="hover-btn-new"><span>어디로 연결할지</span></a>
+                    </div>
+                </div> {% endcomment %}
+				
+                <!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+	
+    <div id="overviews" class="section lb">
+        <div class="container">
+            <div class="section-title row text-center">
+                <div class="col-md-8 offset-md-2">
+                    <h3>개발환경</h3>
+                    <p class="lead">5조 프로젝트 진행 개발환경</p>
+                </div>
+            </div><!-- end title -->
+        
+            <div class="row align-items-center">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="message-box" >
+                        <h4 style=" font-size : 20px ;">개발 사용 환경</h4>
+                        <br>
+                        <p style="margin-left: 225px; font-size : 20px ;">Python 3.8.8</p> 
+                        <p style="margin-left: 225px; font-size : 20px ;">VScode 1.57.1</p> <p style="margin-left: 225px; font-size : 20px ;">Django 3.1.3,</p>
+                        <p style="margin-left: 225px; font-size : 20px ;">BootStrap 4.0</p> <p style="margin-left: 225px; font-size : 20px ;">HTML5, CSS3</p>
+
+                        <a href="#" class="hover-btn-new"><span>to be continue..</span></a>
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+				
+				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="post-media wow fadeIn">
+                        <img src="{% static 'images/개발 환경.jpg' %}" alt="" class="img-fluid img-rounded">
+                    </div><!-- end media -->
+                </div><!-- end col -->
+			</div>
+			<div class="row align-items-center">
+				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="post-media wow fadeIn">
+                        <img src="{% static 'images/팀활동 사진.jpg' %}" alt="" class="img-fluid img-rounded">
+                    </div><!-- end media -->
+                </div><!-- end col -->
+				
+				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="message-box">
+                        <h2>06월 22일 회의</h2>
+                        <p>교육장 내에 있는 시설에서 회의 하는 모습</p>
+                        <p>special Thanks to.</p>
+                        <p>사진 찍어주신</p>
+
+                        <a href="#" class="hover-btn-new"><span>김경진 님</span></a>
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+				
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+    <section class="page-section">
+		<div class="container">
+			 <div class="section-title row text-center">
+                <div class="col-md-8 offset-md-2">
+                    <h3>프로젝트 타임라인</h3>
+                    <p class="lead">Python Web Project 진행과정</p>
+                </div>
+            </div><!-- end title -->
+			<div class="timeline">
+				<div class="timeline__wrap">
+					<div class="timeline__items">
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-01">
+								<h2>6월 15일</h2>
+								<p>주제 선정 및 브레인스토밍 <br>진행 후 학생 관리시스템의 <br>기능 정리.</p>
+							</div>
+						</div>
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-02">
+								<h2>6월 16일</h2>
+								<p>사용할 템플릿 선정.</p> <p>무료 템플릿에 구현되지 않은 기능 구현 계획.</p>
+								<p>Notion을 사용해 팀 활동 기록 시작.</p>
+							</div>
+						</div>
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-03">
+								<h2>6월 17일</h2>
+								<p>요구사항 정의서 작성 시작.</p><p> 템플릿을 최종 선정하고 기능별로 ERD를 작성하기 시작.</p>
+							</div>
+						</div>
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-04">
+								<h2>6월 18일</h2>
+								<p>본격적인 개발에 앞서 최종적인<br> 브레인스토밍을 진행. </p>
+							</div>
+						</div>
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-01">
+								<h2>6월 21일</h2>
+								<p>페이지별 기능 정의와 UI/UX 설계를 진행.</p>
+							</div>
+						</div>
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-02">
+								<h2>6월 22일</h2>
+								<p>김남현 강사님 피드백.</p> <p>기능을 상세하게 구분지어 Web Site 구조도를 작성.</p>
+							</div>
+						</div>
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-03">
+								<h2>6월 23일</h2>
+								<p>김남현 강사님, 배경삼 연구원님, 구정은 강사님 피드백.</p> <p>역할분담 및 질문전용 Notion 개설 등 본격적인 시작.</p>
+							</div>
+						</div>
+						<div class="timeline__item">
+							<div class="timeline__content img-bg-04">
+								<h2>6월 24일</h2>
+								<p>Notion 용량문제로 인하여 OneNote로 문서 이동.</p>
+								<p>본격적인 개발 시작.</p>
+							</div>
+						</div>
+                        <div class="timeline__item">
+							<div class="timeline__content img-bg-04">
+								<h2>6월 25일 ~ 30일</h2>
+								<p>UI/UX 재설계, 요구사항 정의서 확립.</p>
+								<p>sqlite 활용 방안 고려, git 학습.</p>
+							</div>
+						</div>
+                        <div class="timeline__item">
+							<div class="timeline__content img-bg-03">
+								<h2>7월 1일 ~ 7일</h2>
+								<p>웹페이지에 CRUD, 통계 자료 구성 및 기능 구현.</p> <p>웹 개발 시작.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="section cl">
+		<div class="container">
+			<div class="row text-left stat-wrap">
+				<div class="col-md-4 col-sm-4 col-xs-12">
+					<span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-money"></i></span>
+					<p class="stat_count">1000</p>
+					<h3>취업자 수</h3>
+				</div><!-- end col -->
+
+				<div class="col-md-4 col-sm-4 col-xs-12">
+					<span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-idea"></i></span>
+					<p class="stat_count">1200</p>
+					<h3>수료생 수</h3>
+				</div><!-- end col -->
+
+				<div class="col-md-4 col-sm-4 col-xs-12">
+					<span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-happy"></i></span>
+					<p class="stat_count">4.87</p>
+					<h3>수강생 만족도</h3>
+				</div><!-- end col -->
+			</div><!-- end row -->
+		</div><!-- end container -->
+	</div><!-- end section -->
+
+    {% comment %} <div id="pricing" class="section lb">
+        <div class="container">
+            <div class="section-title text-center">
+                <h3>Ready to get started? 제거?</h3>
+                <p>Lorem ipsum dolor sit aet, consectetur adipisicing lit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+            </div><!-- end title -->
+
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="message-box">
+                        <ul class="nav nav-pills nav-stacked" id="myTabs">
+                            <li><a class="active" href="#tab1" data-toggle="pill">Monthly Subscription</a></li>
+                            <li><a href="#tab2" data-toggle="pill">Yearly Subscription</a></li>
+                        </ul>
+                    </div>
+                </div><!-- end col -->
+            </div>
+
+            <hr class="invis">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="tab-content">
+                        <div class="tab-pane active fade show" id="tab1">
+                            <div class="row text-center">
+                                <div class="col-md-4">
+                                    <div class="pricing-table pricing-table-highlighted">
+                                        <div class="pricing-table-header grd1">
+                                            <h2>Shared Hosting</h2>
+                                            <h3>$85/month</h3>
+                                        </div>
+                                        <div class="pricing-table-space"></div>
+                                        <div class="pricing-table-features">
+                                            <p><i class="fa fa-envelope-o"></i> <strong>250</strong> Email Addresses</p>
+                                            <p><i class="fa fa-rocket"></i> <strong>125GB</strong> of Storage</p>
+                                            <p><i class="fa fa-database"></i> <strong>140</strong> Databases</p>
+                                            <p><i class="fa fa-link"></i> <strong>60</strong> Domains</p>
+                                            <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support</p>
+                                        </div>
+                                        <div class="pricing-table-sign-up">
+                                            <a href="#" class="hover-btn-new"><span>Order Now</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="pricing-table pricing-table-highlighted">
+                                        <div class="pricing-table-header grd1">
+                                            <h2>WordPress Hosting</h2>
+                                            <h3>$59/month</h3>
+                                        </div>
+                                        <div class="pricing-table-space"></div>
+                                        <div class="pricing-table-features">
+                                            <p><i class="fa fa-envelope-o"></i> <strong>150</strong> Email Addresses</p>
+                                            <p><i class="fa fa-rocket"></i> <strong>65GB</strong> of Storage</p>
+                                            <p><i class="fa fa-database"></i> <strong>60</strong> Databases</p>
+                                            <p><i class="fa fa-link"></i> <strong>30</strong> Domains</p>
+                                            <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support</p>
+                                        </div>
+                                        <div class="pricing-table-sign-up">
+                                            <a href="#" class="hover-btn-new"><span>Order Now</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="pricing-table pricing-table-highlighted">
+                                        <div class="pricing-table-header grd1">
+                                            <h2>Reseller Hosting</h2>
+                                            <h3>$85/month</h3>
+                                        </div>
+                                        <div class="pricing-table-space"></div>
+                                        <div class="pricing-table-features">
+                                            <p><i class="fa fa-envelope-o"></i> <strong>250</strong> Email Addresses</p>
+                                            <p><i class="fa fa-rocket"></i> <strong>125GB</strong> of Storage</p>
+                                            <p><i class="fa fa-database"></i> <strong>140</strong> Databases</p>
+                                            <p><i class="fa fa-link"></i> <strong>60</strong> Domains</p>
+                                            <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support</p>
+                                        </div>
+                                        <div class="pricing-table-sign-up">
+                                            <a href="#" class="hover-btn-new"><span>Order Now</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- end row -->
+                        </div><!-- end pane -->
+
+                        <div class="tab-pane fade" id="tab2">
+                            <div class="row text-center">
+                                <div class="col-md-4">
+                                    <div class="pricing-table pricing-table-highlighted">
+                                        <div class="pricing-table-header grd1">
+                                            <h2>Shared Hosting</h2>
+                                            <h3>$85/Year</h3>
+                                        </div>
+                                        <div class="pricing-table-space"></div>
+                                        <div class="pricing-table-features">
+                                            <p><i class="fa fa-envelope-o"></i> <strong>250</strong> Email Addresses</p>
+                                            <p><i class="fa fa-rocket"></i> <strong>125GB</strong> of Storage</p>
+                                            <p><i class="fa fa-database"></i> <strong>140</strong> Databases</p>
+                                            <p><i class="fa fa-link"></i> <strong>60</strong> Domains</p>
+                                            <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support</p>
+                                        </div>
+                                        <div class="pricing-table-sign-up">
+                                            <a href="#" class="hover-btn-new"><span>Order Now</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="pricing-table pricing-table-highlighted">
+                                        <div class="pricing-table-header grd1">
+                                            <h2>WordPress Hosting</h2>
+                                            <h3>$59/Year</h3>
+                                        </div>
+                                        <div class="pricing-table-space"></div>
+                                        <div class="pricing-table-features">
+                                            <p><i class="fa fa-envelope-o"></i> <strong>150</strong> Email Addresses</p>
+                                            <p><i class="fa fa-rocket"></i> <strong>65GB</strong> of Storage</p>
+                                            <p><i class="fa fa-database"></i> <strong>60</strong> Databases</p>
+                                            <p><i class="fa fa-link"></i> <strong>30</strong> Domains</p>
+                                            <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support</p>
+                                        </div>
+                                        <div class="pricing-table-sign-up">
+                                            <a href="#" class="hover-btn-new"><span>Order Now</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="pricing-table pricing-table-highlighted">
+                                        <div class="pricing-table-header grd1">
+                                            <h2>Reseller Hosting</h2>
+                                            <h3>$85/Year</h3>
+                                        </div>
+                                        <div class="pricing-table-space"></div>
+                                        <div class="pricing-table-features">
+                                            <p><i class="fa fa-envelope-o"></i> <strong>250</strong> Email Addresses</p>
+                                            <p><i class="fa fa-rocket"></i> <strong>125GB</strong> of Storage</p>
+                                            <p><i class="fa fa-database"></i> <strong>140</strong> Databases</p>
+                                            <p><i class="fa fa-link"></i> <strong>60</strong> Domains</p>
+                                            <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support</p>
+                                        </div>
+                                        <div class="pricing-table-sign-up">
+                                            <a href="#" class="hover-btn-new"><span>Order Now</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- end row -->
+                        </div><!-- end pane -->
+                    </div><!-- end content -->
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section --> {% endcomment %}
+
+    {% include "brand/include/team_intro.html" %}
+
+	<script src="{% static 'js/timeline.min.js' %}"></script>
+	<script>
+		timeline(document.querySelectorAll('.timeline'), {
+			forceVerticalMode: 700,
+			mode: 'horizontal',
+			verticalStartPosition: 'left',
+			visibleItems: 4
+		});
+	</script>
+
+{% endblock %}

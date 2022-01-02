@@ -1,0 +1,217 @@
+{% extends 'crm/include/base_c.html' %}
+{% load static %}
+{% block content %}
+
+<main class="content">
+	<div class="container-fluid p-0">
+
+		<h1 class="h3 mb-3">신규 수강생 등록</h1>
+
+		<div class="row">
+			<div class="col-md-3 col-xl-2">
+
+				<div class="card">
+					<div class="card-header">
+						<h5 class="card-title mb-0">Profile Settings</h5>
+					</div>
+
+					<div class="list-group list-group-flush" role="tablist">
+						<a class="list-group-item list-group-item-action active" data-toggle="list" href="#account"
+							role="tab">
+							Account
+						</a>
+						<a class="list-group-item list-group-item-action" data-toggle="list" href="#password"
+							role="tab">
+							Password
+						</a>
+						<a class="list-group-item list-group-item-action" data-toggle="list" href="#Delete_account"
+							role="tab">
+							Delete account
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-9 col-xl-10">
+				<div class="tab-content">
+					<div class="tab-pane fade show active" id="account" role="tabpanel">
+
+						<div class="card">
+							<div class="card-header">
+
+								<h4>세부정보</h4>
+							</div>
+							<div class="card-body">
+
+								<div class="row">
+									<div class="col-md-8">
+										<form action="{% url 'CRM:add_novice'%}" method="post">
+											{% csrf_token %}
+											<div class="row">
+												<div class="mb-3 col-md-6">
+													<div class="form-group">
+														<label class="form-label" for="inputLastName"> 이름</label>
+														<input type="text" id="name" name="name" class="form-control"
+															placeholder="이름">
+
+														<!-- <textarea name="name" class="form-control" id="name" rows="1"></textarea> -->
+													</div>
+												</div>
+												<div class="mb-3 col-md-6">
+													<div class="form-group">
+														<label class="form-label" for="inputBirth">생년월일</label>
+														<!-- <textarea name="birth" class="form-control" id="birth" rows="1"></textarea> -->
+														<input type="text" id="birth" name="birth" class="form-control"
+															id="Birth" placeholder="생년월일">
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="mb-3 col-md-6">
+													<div class="form-group">
+														<label class="form-label" for="inputEmail">이메일</label>
+														<!-- <textarea name="email"  class="form-control" id="email" rows="1"></textarea> -->
+														<input type="email" id="email" name="email" class="form-control"
+															id="inputEmail" placeholder="Email">
+													</div>
+												</div>
+												<div class="mb-3 col-md-6">
+													<div class="form-group">
+														<label class="form-label" for="inputPhonenumber">번호</label>
+														<!-- <textarea name="digits" class="form-control" id="digits" rows="1"></textarea> -->
+														<input type="text" id="digits" name="digits"
+															class="form-control" id="inputPhonenumber" placeholder="번호">
+													</div>
+												</div>
+											</div>
+											<div class="mb-3">
+												<div class="form-group">
+													<label class="form-label" for="inputAddress">주소</label>
+													<!-- <textarea name="address" class="form-control" id="address" rows="1"></textarea> -->
+													<input type="text" id="address" name="address" class="form-control"
+														id="inputAddress" placeholder="서울시">
+												</div>
+											</div>
+											<div class="row">
+												<div class="mb-3 col-md-3">
+													<div class="form-group">
+														<label class="form-label" for="inputUniv">학교</label>
+														<!-- <textarea name="univ" class="form-control" id="univ" rows="1"></textarea> -->
+														<input type="text" id="univ" name="univ" class="form-control"
+															id="inputUniv">
+													</div>
+												</div>
+												<div class="mb-3 col-md-3">
+													<div class="form-group">
+														<label class="form-label" for="inputMajor">전공</label>
+														<!-- <textarea name="major" class="form-control" id="major" rows="1"></textarea> -->
+														<input type="text" id="major" name="major" class="form-control"
+															id="inputMajor">
+													</div>
+												</div>
+												<div class="mb-3 col-md-3">
+													<div class="form-group">
+														<label class="form-label" for="inputLanguage">사용 가능 언어</label>
+														<!-- <textarea name="language" class="form-control" id="language" rows="1"></textarea> -->
+														<input type="text" id="language" name="language"
+															class="form-control" id="inputLanguage">
+													</div>
+												</div>
+												<div class="mb-3 col-md-3">
+													<h5 class="card-title">과정등록</h5>
+													<!-- <h6 class="card-subtitle text-muted">인공지능</h6> -->
+													<select class="form-control">
+														<option selected>과정명</option>
+														<option>인공지능</option>
+														<option>스마트팩토리</option>
+														<option>빅데이터</option>
+													</select>
+												</div>
+											</div>
+									</div>
+
+									<div class="col-md-4">
+										<div class="text-center">
+											<img alt="Charles Hall" src="{% static 'img/avatars/avatar.jpg' %}"
+												class="rounded mr-2 mb-2" width="128" height="128" />
+											<div class="mt-2">
+												<label class="form-label w-100">사진 업로드</label>
+												<input type="file">
+												<!-- span class="btn btn-primary"><i class="fas fa-upload"></i>사진
+													저장</span>-->
+											</div>
+											<small>For best results, use an image at least 128px by
+												128px in .jpg format</small>
+										</div>
+									</div>
+								</div>
+
+								<button type="submit" class="btn btn-primary">변경 및 저장</button>
+								</form>
+
+							</div>
+						</div>
+
+
+
+					</div>
+					<div class="tab-pane fade" id="password" role="tabpanel">
+						<div class="card">
+							<div class="card-body">
+								<h5 class="card-title">비밀번호</h5>
+
+								<form>
+									<div class="mb-3">
+										<label class="form-label" for="inputPasswordCurrent">현재
+											비밀번호</label>
+										<input type="password" class="form-control" id="inputPasswordCurrent">
+										<small><a href="#">비밀번호를 잊으셨나요?</a></small>
+									</div>
+									<div class="mb-3">
+										<label class="form-label" for="inputPasswordNew">새
+											비밀번호</label>
+										<input type="password" class="form-control" id="inputPasswordNew">
+									</div>
+									<div class="mb-3">
+										<label class="form-label" for="inputPasswordNew2">새
+											비밀번호 확인</label>
+										<input type="password" class="form-control" id="inputPasswordNew2">
+									</div>
+									<button type="submit" class="btn btn-primary">변경 저장</button>
+								</form>
+
+							</div>
+						</div>
+					</div>
+
+					<div class="tab-pane fade" id="Delete_account" role="tabpanel">
+
+						<div class="col-12 col-lg-6">
+							<div class="card">
+								<div class="card-header">
+									<h5 class="card-title">계정 삭제</h5>
+									<h6 class="card-subtitle text-muted">계정을 정말 삭제하시겠습니까?</h6>
+								</div>
+								<div class="card-body text-center">
+									<div class="mb-3">
+
+										<button class="btn btn-danger"><i class="fas fa-times"></i> 계정삭제</button>
+
+									</div>
+
+
+								</div>
+							</div>
+						</div>
+
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+</main>
+
+{% endblock %}

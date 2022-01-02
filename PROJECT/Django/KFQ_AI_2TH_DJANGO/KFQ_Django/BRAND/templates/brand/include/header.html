@@ -1,0 +1,192 @@
+{% load static %}
+    <!-- Modal -->
+	<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header tit-up">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">로그인</h4>
+			</div>
+			<div class="modal-body customer-box">
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div class="tab-pane active" id="Login">
+						<form method="post" class="form-horizontal" action="{% url 'BRAND:signin' %}">
+							{% csrf_token %}
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="email" name="email" placeholder="이메일" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="password" name="password" placeholder="비밀번호" type="password">
+								</div>
+							</div>
+							<!-- Nav tabs -->
+							<ul class="nav nav-tabs">
+									<button type="submit" class="btn btn-light btn-radius btn-brd grd1" id="signin">로그인</button>
+									<button class="btn btn-light btn-radius btn-brd grd1" href="#Registration" data-toggle="tab">회원가입</button>
+									<button class="btn btn-light btn-radius btn-brd grd1" onClick="location.href='BRAND:find_password'">비밀번호 찾기</button>
+							</ul>
+						</form>
+					</div>
+
+					<div class="tab-pane" id="Registration">
+						<form method="post" action="{% url 'BRAND:signup'%}">
+							{% if messages %}
+								{% for message in messages %}
+								<div class="row" style="margin:20px auto;">
+									<div class="col-sm-12">
+										<div class="alert alert-danger">
+											<strong>{{ message.tags }}!</strong> {{ message.message }}
+										</div>
+									</div>
+								</div>
+								{% endfor %}
+							{% endif %}
+							{% csrf_token %}
+
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input type="text" class="form-control" id="email" name="email" placeholder="이메일">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input type="password" class="form-control" id="password" name="password" placeholder="비밀번호">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input type="password" class="form-control" id="repassword" name="repassword" placeholder="비밀번호 확인">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input type="text" class="form-control" id="name" name="name" placeholder="이름">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input type="date" class="form-control" id="birth" name="birth" placeholder="생년월일">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input type="tel" class="form-control" id="phone_number" name="phone_number" placeholder="핸드폰 번호">
+								</div>
+							</div>
+
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input type="text" class="form-control" id="class_fk" name="class_fk" placeholder="과정 번호">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input type="text" class="form-control" id="authority" name="authority" placeholder="사용자 권한, 수강생/관리자/강사">
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-sm-10">
+									<button id="signup" class="btn btn-light btn-radius btn-brd grd1" href="{% url 'BRAND:index' %}">
+										회원가입
+									</button>
+									<button type="button" class="btn btn-light btn-radius btn-brd grd1" data-dismiss="modal" aria-hidden="true">취소</button>
+								</div>
+							</div>
+						</form>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	  </div>
+	</div>
+
+    <!-- LOADER -->
+	<div id="preloader">
+		<div class="loader-container">
+			<div class="progress-br float shadow">
+				<div class="progress__item"></div>
+			</div>
+		</div>
+	</div>
+	<!-- END LOADER -->
+
+	<!-- Start header -->
+	<header class="top-navbar">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#">
+					<img src="{% static 'images/logo.png' %}" alt="" />
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbars-host">
+					<ul class="navbar-nav ml-auto">
+						{% block content %}
+						{% comment %} {% if page != index %}
+						<li class="nav-item active"><a class="nav-link" href="#">{{ page }}</a></li>
+						{% endif %} {% endcomment %}
+
+						{% if page == 'Home' %}
+						<li class="nav-item active"><a class="nav-link" href="{% url 'BRAND:index' %}">홈</a></li>
+						{% else %}
+						<li class="nav-item"><a class="nav-link" href="{% url 'BRAND:index' %}">홈</a></li>
+						{% endif %}
+
+						{% if page == 'Features' %}
+						<li class="nav-item active"><a class="nav-link" href="{% url 'BRAND:features' %}">핵심기능</a></li>
+						{% else %}
+						<li class="nav-item"><a class="nav-link" href="{% url 'BRAND:features' %}">핵심기능</a></li>
+						{% endif %}
+
+						{% if request.session.email %}
+						<li class="nav-item"><a class="nav-link" href="{% url 'CRM:index' %}">CRM 사용</a></li>
+						{% else %}
+							{% if page == 'Hosting' %}
+							<li class="nav-item active dropdown">
+							{% else %}
+							<li class="nav-item dropdown">
+							{% endif %}
+								<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">시스템체험</a>
+								<div class="dropdown-menu" aria-labelledby="dropdown-a">
+								<a class="dropdown-item" href="{% url 'CRM:01_index.html' %}">대쉬보드</a>
+								<a class="dropdown-item" href="{% url 'CRM:02_profile.html' %}">프로필</a>
+								<a class="dropdown-item" href="{% url 'CRM:05_blank.html' %}">좌석 배치도</a>
+								</div>
+							</li>
+						{% endif %}
+
+						{% if page == 'Contact' %}
+						<li class="nav-item active"><a class="nav-link" href="{% url 'BRAND:contact' %}">고객센터</a></li>
+						{% else %}
+						<li class="nav-item"><a class="nav-link" href="{% url 'BRAND:contact' %}">고객센터</a></li>
+						{% endif %}
+
+						{% if page == 'About Us' %}
+						<li class="nav-item active"><a class="nav-link" href="{% url 'BRAND:about' %}">팀원소개</a></li>
+						{% else %}
+						<li class="nav-item"><a class="nav-link" href="{% url 'BRAND:about' %}">팀원소개</a></li>
+						{% endif %}
+						
+						{% endblock %}
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						{% if request.session.email %}
+						<li><a class="hover-btn-new log" href="{% url 'BRAND:signout' %}"><span>로그아웃</span></a></li>
+						{% else %}
+						<li><a class="hover-btn-new log" href="#" data-toggle="modal" data-target="#login"><span>로그인</span></a></li>
+						{% endif %}
+                    </ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<!-- End header -->
